@@ -1,0 +1,61 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: μVision V5.14.0.0
+Copyright (C) 2015 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: WU YILIN, NCEPU, LIC=P6FSB-2IUBD-IL4CB-290XG-FC8LK-Y9JBN
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Professional  Version: 5.14.0.0
+Toolchain Path:  E:\MDK5\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.05 update 1 (build 106)
+Assembler:       Armasm.exe V5.05 update 1 (build 106)
+Linker/Locator:  ArmLink.exe V5.05 update 1 (build 106)
+Library Manager: ArmAr.exe V5.05 update 1 (build 106)
+Hex Converter:   FromElf.exe V5.05 update 1 (build 106)
+CPU DLL:         SARMCM3.DLL V5.14.0.0
+Dialog DLL:      DCM.DLL V1.13.1.0
+Target DLL:      CMSIS_AGDI.dll V1.21.0.0
+Dialog DLL:      TCM.DLL V1.14.4.0
+ 
+<h2>Project:</h2>
+D:\4，程序源码\工训赛-物流小车_base line\程序\510驱动板\USER\PWM.uvprojx
+Project File Date:  03/24/2021
+
+<h2>Output:</h2>
+Build target 'PWM'
+compiling main.c...
+main.c(92): warning:  #223-D: function "TIM8_PWM_Init" declared implicitly
+    TIM8_PWM_Init( 7199, 9 );   /* PWM频率=1k */
+main.c(137): warning:  #223-D: function "Adc_Init" declared implicitly
+                Adc_Init();     //ADC与DMA初始化
+main.c(138): warning:  #223-D: function "DMA_ADC_Init" declared implicitly
+                DMA_ADC_Init();
+main.c(147): warning:  #223-D: function "ADC_Key" declared implicitly
+                                        key = ADC_Key(ADCConvertedValue[0][2],0);
+main.c(282): warning:  #223-D: function "ADC_Key" declared implicitly
+                                if(ADC_Key(ADCConvertedValue[0][2],1) == 3 || PS2_Keyscan(1)==PSB_SELECT)      //按键0返回主菜单
+main.c(332): warning:  #223-D: function "ADC_Key" declared implicitly
+                                                if(ADC_Key(ADCConvertedValue[0][2],1) == 3 || PS2_Keyscan(1)==PSB_BLUE)      //按键3返回主菜单
+main.c(356): warning:  #223-D: function "ADC_Key" declared implicitly
+                                            OLED_ShowNum(0,30,ADC_Key(ADCConvertedValue[0][2],1),1,12,1);               
+main.c(381): warning:  #111-D: statement is unreachable
+                                        break;
+main.c(57): warning:  #177-D: variable "problem_temp" was declared but never referenced
+        u8 problem_temp = 0;                                    /* 临时变量 K1修改 K0确定后赋值给全局problem */
+main.c: 9 warnings, 0 errors
+linking...
+Program Size: Code=28110 RO-data=8306 RW-data=456 ZI-data=4040  
+FromELF: creating hex file...
+"..\OBJ\PWM.axf" - 0 Error(s), 9 Warning(s).
+
+<h2>Collection of Component include folders:</h2>
+  D:\4，程序源码\工训赛-物流小车_base line\程序\510驱动板\USER\RTE
+  E:\MDK5\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+</pre>
+</body>
+</html>

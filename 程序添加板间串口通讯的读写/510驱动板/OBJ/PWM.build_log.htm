@@ -1,0 +1,82 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: μVision V5.25.3.0
+Copyright (C) 2018 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: kkk 1344081134@qq.com, 酷酷酷, LIC=FQQDY-IV09M-SE3H0-BI6GB-2GW9W-HB722
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Professional  Version: 5.18
+Toolchain Path:  C:\Keil5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 1 (build 61)
+Assembler:       Armasm.exe V5.06 update 1 (build 61)
+Linker/Locator:  ArmLink.exe V5.06 update 1 (build 61)
+Library Manager: ArmAr.exe V5.06 update 1 (build 61)
+Hex Converter:   FromElf.exe V5.06 update 1 (build 61)
+CPU DLL:         SARMCM3.DLL V5.18
+Dialog DLL:      DCM.DLL V1.13.6.0
+Target DLL:      CMSIS_AGDI.dll V1.25.7.0
+Dialog DLL:      TCM.DLL V1.14.8.0
+ 
+<h2>Project:</h2>
+E:\Demo\工训赛-物流小车\程序添加板间串口通讯的读写\510驱动板\USER\PWM.uvprojx
+Project File Date:  04/17/2021
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 1 (build 61)', folder: 'C:\Keil5\ARM\ARMCC\Bin'
+Build target 'PWM'
+compiling main.c...
+main.c(110): warning:  #223-D: function "TIM8_PWM_Init" declared implicitly
+    TIM8_PWM_Init( 7199, 9 );  	/* PWM频??=1k */
+main.c(118): warning:  #223-D: function "Adc_Init" declared implicitly
+  		Adc_Init();     //ADC??DMA??始化
+main.c(119): warning:  #223-D: function "DMA_ADC_Init" declared implicitly
+  		DMA_ADC_Init();
+main.c(139): warning:  #223-D: function "ADC_Key" declared implicitly
+  					key = ADC_Key(ADCConvertedValue[0][2],0);
+main.c(200): warning:  #223-D: function "ADC_Key" declared implicitly
+  							key = ADC_Key(ADCConvertedValue[0][2],0);
+main.c(866): warning:  #111-D: statement is unreachable
+  											break;
+main.c(870): warning:  #111-D: statement is unreachable
+  										break;
+main.c(875): warning:  #223-D: function "ADC_Key" declared implicitly
+  						key = ADC_Key(ADCConvertedValue[0][2],1);
+main.c(943): warning:  #111-D: statement is unreachable
+  					break;
+main.c(970): warning:  #111-D: statement is unreachable
+  					break;
+main.c(988): warning:  #111-D: statement is unreachable
+  					break;
+main.c(76): warning:  #177-D: variable "problem_temp" was declared but never referenced
+  	u8 problem_temp = 0;                                    /* ??时??量 K1?薷? K0确定?蟾?值??全??problem */
+main.c(77): warning:  #177-D: variable "a" was declared but never referenced
+  	int a;
+main.c(997): warning:  #177-D: variable "tempQ" was declared but never referenced
+  		int t,len,tempQ=0,tempY=0;
+main.c(997): warning:  #177-D: variable "tempY" was declared but never referenced
+  		int t,len,tempQ=0,tempY=0;
+main.c: 15 warnings, 0 errors
+linking...
+Program Size: Code=33282 RO-data=22270 RW-data=5776 ZI-data=4528  
+FromELF: creating hex file...
+"..\OBJ\PWM.axf" - 0 Error(s), 15 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F1xx_DFP.1.0.5.pack
+                Keil.STM32F1xx_DFP.1.0.5
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_PWM
+  C:\Keil5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+Build Time Elapsed:  00:00:02
+</pre>
+</body>
+</html>

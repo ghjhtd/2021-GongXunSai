@@ -1,0 +1,1309 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        03/09/2019  10:25:59  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\KEIL_V4\C51\BIN\BL51.EXE led.obj, main.obj, spi.obj, mpuiic.obj, mpu6050.obj, parameter.obj TO LED RTX51 RAMSIZE (256
+>> ) CODE (0X0000-0X1FFF)
+
+
+MEMORY MODEL: LARGE WITH FLOATING POINT ARITHMETIC
+
+
+INPUT MODULES INCLUDED:
+  led.obj (LED)
+  main.obj (MAIN)
+  spi.obj (SPI)
+  mpuiic.obj (MPUIIC)
+  mpu6050.obj (MPU6050)
+  parameter.obj (PARAMETER)
+  C:\KEIL_V4\C51\LIB\C51FPL.LIB (?C?FPADD)
+  C:\KEIL_V4\C51\LIB\C51FPL.LIB (?C?FPMUL)
+  C:\KEIL_V4\C51\LIB\C51FPL.LIB (?C?FPDIV)
+  C:\KEIL_V4\C51\LIB\C51FPL.LIB (?C?FCAST)
+  C:\KEIL_V4\C51\LIB\C51FPL.LIB (?C?CASTF)
+  C:\KEIL_V4\C51\LIB\C51FPL.LIB (?C?FPGETOPN)
+  C:\KEIL_V4\C51\LIB\C51L.LIB (?C_STARTUP)
+  C:\KEIL_V4\C51\LIB\C51L.LIB (?C?CLDPTR)
+  C:\KEIL_V4\C51\LIB\C51L.LIB (?C?CLDOPTR)
+  C:\KEIL_V4\C51\LIB\C51L.LIB (?C?CSTPTR)
+  C:\KEIL_V4\C51\LIB\C51L.LIB (?C?IMUL)
+  C:\KEIL_V4\C51\LIB\C51L.LIB (?C?UIDIV)
+  C:\KEIL_V4\C51\LIB\C51L.LIB (?C?SIDIV)
+  C:\KEIL_V4\C51\LIB\C51L.LIB (?C?IILDX)
+  C:\KEIL_V4\C51\LIB\C51L.LIB (?C?ILDIX)
+  C:\KEIL_V4\C51\LIB\C51L.LIB (?C?ISTPTR)
+  C:\KEIL_V4\C51\LIB\C51L.LIB (?C?LNEG)
+  C:\KEIL_V4\C51\LIB\C51L.LIB (?C?LSTXDATA)
+  C:\KEIL_V4\C51\LIB\C51L.LIB (?C_INIT)
+
+
+LINK MAP OF MODULE:  LED (LED)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *  X D A T A   M E M O R Y  * * * * * * *
+            XDATA   0000H     05D0H     UNIT         ?XD?SPI
+            XDATA   05D0H     0024H     UNIT         ?XD?PARAMETER
+            XDATA   05F4H     0018H     UNIT         _XDATA_GROUP_
+            XDATA   060CH     0007H     UNIT         ?XD?_MPU_WRITE_LEN?MPU6050
+            XDATA   0613H     0002H     UNIT         ?XD?SHOW_GYROSCOPE?PARAMETER
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     05F3H     UNIT         ?C_INITSEG
+            CODE    05F6H     04B7H     UNIT         ?C?LIB_CODE
+            CODE    0AADH     031FH     UNIT         ?PR?SHOW_ACCELERATION?PARAMETER
+BL51 BANKED LINKER/LOCATER V6.22                                                      03/09/2019  10:25:59  PAGE 2
+
+
+            CODE    0DCCH     02FBH     UNIT         ?PR?SHOW_GYROSCOPE?PARAMETER
+            CODE    10C7H     0177H     UNIT         ?PR?ACCELERATION_ADJUST1?PARAMETER
+            CODE    123EH     0148H     UNIT         ?PR?_SHOW_TEMPERTURE?PARAMETER
+            CODE    1386H     0138H     UNIT         ?PR?GYROSCOPE_ADJUST1?PARAMETER
+            CODE    14BEH     0124H     UNIT         ?CO?PARAMETER
+            CODE    15E2H     00BCH     UNIT         ?PR?_MPU_GET_ACCELEROMETER?MPU6050
+            CODE    169EH     00BBH     UNIT         ?PR?_OLED_SHOWNUM?SPI
+            CODE    1759H     00B8H     UNIT         ?PR?_MPU_GET_GYROSCOPE?MPU6050
+            CODE    1811H     009EH     UNIT         ?PR?OLED_INIT?SPI
+            CODE    18AFH     008CH     UNIT         ?C_C51STARTUP
+            CODE    193BH     008AH     UNIT         ?PR?ACCELERATION_ADJUST?PARAMETER
+            CODE    19C5H     008AH     UNIT         ?PR?GYROSCOPE_ADJUST?PARAMETER
+            CODE    1A4FH     0083H     UNIT         ?PR?CONNECT_CHECK?PARAMETER
+            CODE    1AD2H     0081H     UNIT         ?PR?_MPU_READ_LEN?MPU6050
+            CODE    1B53H     006FH     UNIT         ?PR?_MPU_WRITE_LEN?MPU6050
+            CODE    1BC2H     006EH     UNIT         ?PR?_OLED_SHOWSTRING?SPI
+            CODE    1C30H     0068H     UNIT         ?PR?MPU_INIT?MPU6050
+            CODE    1C98H     005CH     UNIT         ?PR?_MPU_SET_RATE?MPU6050
+            CODE    1CF4H     005AH     UNIT         ?PR?MPU_GET_TEMPERATURE?MPU6050
+            CODE    1D4EH     004CH     UNIT         ?PR?_OLED_SHOWCHAR?SPI
+            CODE    1D9AH     004AH     UNIT         ?PR?_MPU_SET_LPF?MPU6050
+            CODE    1DE4H     0043H     UNIT         ?PR?_MPU_WRITE_BYTE?MPU6050
+            CODE    1E27H     0039H     UNIT         ?PR?_OLED_WR_BYTE?SPI
+            CODE    1E60H     0039H     UNIT         ?PR?_MPU_READ_BYTE?MPU6050
+            CODE    1E99H     002AH     UNIT         ?PR?_MPU_IIC_READ_BYTE?MPUIIC
+            CODE    1EC3H     0029H     UNIT         ?PR?OLED_CLEAR?SPI
+            CODE    1EECH     0028H     UNIT         ?PR?_MPU_IIC_SEND_BYTE?MPUIIC
+            CODE    1F14H     0020H     UNIT         ?PR?_OLED_WR_BP?SPI
+            CODE    1F34H     001EH     UNIT         ?PR?_OLED_POW?SPI
+            CODE    1F52H     001CH     UNIT         ?PR?MAIN?MAIN
+            CODE    1F6EH     001AH     UNIT         ?PR?_DELAY_MS?LED
+            CODE    1F88H     001AH     UNIT         ?PR?MPU_IIC_WAIT_ACK?MPUIIC
+            CODE    1FA2H     0010H     UNIT         ?PR?MPU_IIC_DELAY?MPUIIC
+            CODE    1FB2H     000FH     UNIT         ?PR?MPU_IIC_START?MPUIIC
+            CODE    1FC1H     000EH     UNIT         ?PR?MPU_IIC_STOP?MPUIIC
+            CODE    1FCFH     000AH     UNIT         ?PR?MPU_IIC_ACK?MPUIIC
+            CODE    1FD9H     0008H     UNIT         ?PR?MPU_IIC_NACK?MPUIIC
+            CODE    1FE1H     0007H     UNIT         ?PR?_MPU_SET_GYRO_FSR?MPU6050
+            CODE    1FE8H     0007H     UNIT         ?PR?_MPU_SET_ACCEL_FSR?MPU6050
+
+
+
+OVERLAY MAP OF MODULE:   LED (LED)
+
+
+SEGMENT                                      XDATA_GROUP
+  +--> CALLED SEGMENT                      START    LENGTH
+----------------------------------------------------------
+?C_C51STARTUP                              -----    -----
+  +--> ?PR?MAIN?MAIN
+  +--> ?C_INITSEG
+
+?PR?MAIN?MAIN                              -----    -----
+  +--> ?PR?OLED_INIT?SPI
+  +--> ?PR?CONNECT_CHECK?PARAMETER
+  +--> ?PR?GYROSCOPE_ADJUST?PARAMETER
+  +--> ?PR?ACCELERATION_ADJUST?PARAMETER
+BL51 BANKED LINKER/LOCATER V6.22                                                      03/09/2019  10:25:59  PAGE 3
+
+
+  +--> ?PR?OLED_CLEAR?SPI
+  +--> ?PR?_SHOW_TEMPERTURE?PARAMETER
+  +--> ?PR?SHOW_ACCELERATION?PARAMETER
+
+?PR?OLED_INIT?SPI                          -----    -----
+  +--> ?PR?_DELAY_MS?LED
+  +--> ?PR?_OLED_WR_BYTE?SPI
+  +--> ?PR?OLED_CLEAR?SPI
+
+?PR?OLED_CLEAR?SPI                         -----    -----
+  +--> ?PR?_OLED_WR_BYTE?SPI
+
+?PR?CONNECT_CHECK?PARAMETER                -----    -----
+  +--> ?PR?MPU_INIT?MPU6050
+  +--> ?CO?PARAMETER
+  +--> ?PR?_OLED_SHOWSTRING?SPI
+  +--> ?PR?_DELAY_MS?LED
+
+?PR?MPU_INIT?MPU6050                       -----    -----
+  +--> ?PR?_MPU_WRITE_BYTE?MPU6050
+  +--> ?PR?_DELAY_MS?LED
+  +--> ?PR?_MPU_SET_GYRO_FSR?MPU6050
+  +--> ?PR?_MPU_SET_ACCEL_FSR?MPU6050
+  +--> ?PR?_MPU_SET_RATE?MPU6050
+  +--> ?PR?_MPU_READ_BYTE?MPU6050
+
+?PR?_MPU_WRITE_BYTE?MPU6050                05F7H    0002H
+  +--> ?PR?MPU_IIC_START?MPUIIC
+  +--> ?PR?_MPU_IIC_SEND_BYTE?MPUIIC
+  +--> ?PR?MPU_IIC_WAIT_ACK?MPUIIC
+  +--> ?PR?MPU_IIC_STOP?MPUIIC
+
+?PR?MPU_IIC_START?MPUIIC                   -----    -----
+  +--> ?PR?MPU_IIC_DELAY?MPUIIC
+
+?PR?_MPU_IIC_SEND_BYTE?MPUIIC              -----    -----
+  +--> ?PR?MPU_IIC_DELAY?MPUIIC
+
+?PR?MPU_IIC_WAIT_ACK?MPUIIC                -----    -----
+  +--> ?PR?MPU_IIC_DELAY?MPUIIC
+  +--> ?PR?MPU_IIC_STOP?MPUIIC
+
+?PR?MPU_IIC_STOP?MPUIIC                    -----    -----
+  +--> ?PR?MPU_IIC_DELAY?MPUIIC
+
+?PR?_MPU_SET_GYRO_FSR?MPU6050              -----    -----
+  +--> ?PR?_MPU_WRITE_BYTE?MPU6050
+
+?PR?_MPU_SET_ACCEL_FSR?MPU6050             -----    -----
+  +--> ?PR?_MPU_WRITE_BYTE?MPU6050
+
+?PR?_MPU_SET_RATE?MPU6050                  05F4H    0003H
+  +--> ?PR?_MPU_WRITE_BYTE?MPU6050
+  +--> ?PR?_MPU_SET_LPF?MPU6050
+
+?PR?_MPU_SET_LPF?MPU6050                   -----    -----
+  +--> ?PR?_MPU_WRITE_BYTE?MPU6050
+BL51 BANKED LINKER/LOCATER V6.22                                                      03/09/2019  10:25:59  PAGE 4
+
+
+
+?PR?_MPU_READ_BYTE?MPU6050                 05F4H    0002H
+  +--> ?PR?MPU_IIC_START?MPUIIC
+  +--> ?PR?_MPU_IIC_SEND_BYTE?MPUIIC
+  +--> ?PR?MPU_IIC_WAIT_ACK?MPUIIC
+  +--> ?PR?_MPU_IIC_READ_BYTE?MPUIIC
+  +--> ?PR?MPU_IIC_STOP?MPUIIC
+
+?PR?_MPU_IIC_READ_BYTE?MPUIIC              -----    -----
+  +--> ?PR?MPU_IIC_DELAY?MPUIIC
+  +--> ?PR?MPU_IIC_NACK?MPUIIC
+  +--> ?PR?MPU_IIC_ACK?MPUIIC
+
+?PR?MPU_IIC_NACK?MPUIIC                    -----    -----
+  +--> ?PR?MPU_IIC_DELAY?MPUIIC
+
+?PR?MPU_IIC_ACK?MPUIIC                     -----    -----
+  +--> ?PR?MPU_IIC_DELAY?MPUIIC
+
+?PR?_OLED_SHOWSTRING?SPI                   05F9H    0006H
+  +--> ?PR?_OLED_SHOWCHAR?SPI
+
+?PR?_OLED_SHOWCHAR?SPI                     0602H    0004H
+  +--> ?PR?_OLED_WR_BP?SPI
+  +--> ?PR?_OLED_WR_BYTE?SPI
+
+?PR?_OLED_WR_BP?SPI                        -----    -----
+  +--> ?PR?_OLED_WR_BYTE?SPI
+
+?PR?GYROSCOPE_ADJUST?PARAMETER             -----    -----
+  +--> ?PR?GYROSCOPE_ADJUST1?PARAMETER
+  +--> ?CO?PARAMETER
+  +--> ?PR?_OLED_SHOWSTRING?SPI
+  +--> ?PR?_DELAY_MS?LED
+
+?PR?GYROSCOPE_ADJUST1?PARAMETER            05F4H    0001H
+  +--> ?PR?_MPU_GET_GYROSCOPE?MPU6050
+  +--> ?PR?_DELAY_MS?LED
+
+?PR?_MPU_GET_GYROSCOPE?MPU6050             05F5H    0010H
+  +--> ?PR?_MPU_READ_LEN?MPU6050
+
+?PR?_MPU_READ_LEN?MPU6050                  0606H    0006H
+  +--> ?PR?MPU_IIC_START?MPUIIC
+  +--> ?PR?_MPU_IIC_SEND_BYTE?MPUIIC
+  +--> ?PR?MPU_IIC_WAIT_ACK?MPUIIC
+  +--> ?PR?MPU_IIC_STOP?MPUIIC
+  +--> ?PR?_MPU_IIC_READ_BYTE?MPUIIC
+
+?PR?ACCELERATION_ADJUST?PARAMETER          -----    -----
+  +--> ?PR?ACCELERATION_ADJUST1?PARAMETER
+  +--> ?CO?PARAMETER
+  +--> ?PR?_OLED_SHOWSTRING?SPI
+  +--> ?PR?_DELAY_MS?LED
+
+?PR?ACCELERATION_ADJUST1?PARAMETER         05F4H    0002H
+  +--> ?PR?_DELAY_MS?LED
+BL51 BANKED LINKER/LOCATER V6.22                                                      03/09/2019  10:25:59  PAGE 5
+
+
+  +--> ?PR?_MPU_GET_ACCELEROMETER?MPU6050
+
+?PR?_MPU_GET_ACCELEROMETER?MPU6050         05F6H    0010H
+  +--> ?PR?_MPU_READ_LEN?MPU6050
+
+?PR?_SHOW_TEMPERTURE?PARAMETER             05F4H    0005H
+  +--> ?PR?MPU_GET_TEMPERATURE?MPU6050
+  +--> ?CO?PARAMETER
+  +--> ?PR?_OLED_SHOWSTRING?SPI
+  +--> ?PR?_OLED_SHOWNUM?SPI
+  +--> ?PR?_DELAY_MS?LED
+
+?PR?MPU_GET_TEMPERATURE?MPU6050            05F9H    0006H
+  +--> ?PR?_MPU_READ_LEN?MPU6050
+
+?PR?_OLED_SHOWNUM?SPI                      05F9H    0009H
+  +--> ?PR?_OLED_POW?SPI
+  +--> ?PR?_OLED_SHOWCHAR?SPI
+
+?PR?_OLED_POW?SPI                          0602H    0001H
+
+?PR?SHOW_ACCELERATION?PARAMETER            05F4H    0002H
+  +--> ?PR?_MPU_GET_ACCELEROMETER?MPU6050
+  +--> ?CO?PARAMETER
+  +--> ?PR?_OLED_SHOWSTRING?SPI
+  +--> ?PR?_OLED_SHOWNUM?SPI
+
+
+
+SYMBOL TABLE OF MODULE:  LED (LED)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        LED
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  C:1F6EH         PUBLIC        _delay_ms
+  -------         PROC          _DELAY_MS
+  D:0006H         SYMBOL        ms
+  -------         DO            
+  D:0004H         SYMBOL        a
+  -------         ENDDO         
+  C:1F6EH         LINE#         3
+  C:1F6EH         LINE#         4
+  C:1F6EH         LINE#         6
+  C:1F72H         LINE#         7
+  C:1F72H         LINE#         8
+  C:1F76H         LINE#         9
+  C:1F80H         LINE#         10
+  C:1F85H         LINE#         11
+  C:1F87H         LINE#         13
+  -------         ENDPROC       _DELAY_MS
+  -------         ENDMOD        LED
+
+  -------         MODULE        MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+BL51 BANKED LINKER/LOCATER V6.22                                                      03/09/2019  10:25:59  PAGE 6
+
+
+  D:0090H         PUBLIC        P1
+  C:1F52H         PUBLIC        main
+  -------         PROC          MAIN
+  C:1F52H         LINE#         43
+  C:1F52H         LINE#         44
+  C:1F52H         LINE#         45
+  C:1F55H         LINE#         47
+  C:1F58H         LINE#         48
+  C:1F5BH         LINE#         49
+  C:1F5EH         LINE#         50
+  C:1F61H         LINE#         51
+  C:1F61H         LINE#         52
+  C:1F61H         LINE#         53
+  C:1F69H         LINE#         54
+  C:1F6CH         LINE#         57
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        MAIN
+
+  -------         MODULE        SPI
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  X:0000H         PUBLIC        asc2_1608
+  C:1811H         PUBLIC        OLED_Init
+  C:1F14H         PUBLIC        _OLED_WR_BP
+  C:1BC2H         PUBLIC        _OLED_ShowString
+  C:1E37H         PUBLIC        _OLED_WR_Byte
+  C:1D4EH         PUBLIC        _OLED_ShowChar
+  B:0090H.0       PUBLIC        SPI_SCL
+  C:1F34H         PUBLIC        _OLED_Pow
+  B:0090H.2       PUBLIC        SPI_RST
+  B:0090H.3       PUBLIC        SPI_DC
+  C:169EH         PUBLIC        _OLED_ShowNum
+  B:0090H.4       PUBLIC        SPI_CS
+  C:1EC3H         PUBLIC        OLED_Clear
+  B:0090H.1       PUBLIC        SPI_SDIN
+  -------         PROC          L?0041
+  -------         ENDPROC       L?0041
+  -------         PROC          _OLED_WR_BYTE
+  D:0007H         SYMBOL        dat
+  D:0005H         SYMBOL        mode
+  -------         DO            
+  D:0006H         SYMBOL        i
+  -------         ENDDO         
+  C:1E37H         LINE#         6
+  C:1E37H         LINE#         7
+  C:1E37H         LINE#         9
+  C:1E3AH         LINE#         10
+  C:1E3AH         LINE#         11
+  C:1E3CH         LINE#         12
+  C:1E3EH         LINE#         14
+  C:1E3EH         LINE#         15
+  C:1E40H         LINE#         16
+  C:1E40H         LINE#         17
+  C:1E42H         LINE#         18
+  C:1E44H         LINE#         19
+  C:1E44H         LINE#         20
+  C:1E46H         LINE#         21
+BL51 BANKED LINKER/LOCATER V6.22                                                      03/09/2019  10:25:59  PAGE 7
+
+
+  C:1E4AH         LINE#         22
+  C:1E4AH         LINE#         23
+  C:1E4CH         LINE#         24
+  C:1E4EH         LINE#         26
+  C:1E4EH         LINE#         27
+  C:1E50H         LINE#         28
+  C:1E50H         LINE#         29
+  C:1E52H         LINE#         30
+  C:1E56H         LINE#         31
+  C:1E5BH         LINE#         32
+  C:1E5DH         LINE#         33
+  C:1E5FH         LINE#         35
+  -------         ENDPROC       _OLED_WR_BYTE
+  -------         PROC          _OLED_WR_BP
+  D:0004H         SYMBOL        x
+  D:0005H         SYMBOL        y
+  C:1F14H         LINE#         38
+  C:1F16H         LINE#         39
+  C:1F16H         LINE#         40
+  C:1F1FH         LINE#         41
+  C:1F2BH         LINE#         42
+  -------         ENDPROC       _OLED_WR_BP
+  -------         PROC          OLED_CLEAR
+  -------         DO            
+  D:0004H         SYMBOL        i
+  D:0003H         SYMBOL        n
+  -------         ENDDO         
+  C:1EC3H         LINE#         46
+  C:1EC3H         LINE#         47
+  C:1EC3H         LINE#         49
+  C:1EC5H         LINE#         50
+  C:1EC5H         LINE#         51
+  C:1ECEH         LINE#         52
+  C:1ED3H         LINE#         53
+  C:1ED8H         LINE#         54
+  C:1EE6H         LINE#         55
+  C:1EEBH         LINE#         56
+  -------         ENDPROC       OLED_CLEAR
+  -------         PROC          _OLED_SHOWCHAR
+  D:0001H         SYMBOL        x
+  D:0002H         SYMBOL        y
+  D:0003H         SYMBOL        chr
+  X:0605H         SYMBOL        size1
+  -------         DO            
+  D:0003H         SYMBOL        c
+  D:0004H         SYMBOL        i
+  -------         ENDDO         
+  C:1D4EH         LINE#         65
+  C:1D52H         LINE#         66
+  C:1D52H         LINE#         68
+  C:1D56H         LINE#         69
+  C:1D5EH         LINE#         70
+  C:1D5EH         LINE#         71
+  C:1D63H         LINE#         72
+  C:1D65H         LINE#         73
+  C:1D7AH         LINE#         74
+  C:1D82H         LINE#         75
+BL51 BANKED LINKER/LOCATER V6.22                                                      03/09/2019  10:25:59  PAGE 8
+
+
+  C:1D84H         LINE#         76
+  C:1D99H         LINE#         77
+  C:1D99H         LINE#         78
+  -------         ENDPROC       _OLED_SHOWCHAR
+  -------         PROC          _OLED_SHOWSTRING
+  X:05F9H         SYMBOL        x
+  X:05FAH         SYMBOL        y
+  X:05FBH         SYMBOL        chr
+  X:05FEH         SYMBOL        size1
+  C:1BC2H         LINE#         82
+  C:1BD3H         LINE#         83
+  C:1BD3H         LINE#         84
+  C:1BEDH         LINE#         85
+  C:1BEDH         LINE#         86
+  C:1C04H         LINE#         87
+  C:1C12H         LINE#         88
+  C:1C1CH         LINE#         89
+  C:1C1CH         LINE#         90
+  C:1C1EH         LINE#         91
+  C:1C23H         LINE#         92
+  C:1C23H         LINE#         93
+  C:1C2DH         LINE#         94
+  C:1C2FH         LINE#         95
+  -------         ENDPROC       _OLED_SHOWSTRING
+  -------         PROC          _OLED_POW
+  X:0602H         SYMBOL        m
+  D:0001H         SYMBOL        n
+  -------         DO            
+  D:0006H         SYMBOL        result
+  -------         ENDDO         
+  C:1F34H         LINE#         98
+  C:1F3BH         LINE#         99
+  C:1F3BH         LINE#         100
+  C:1F3FH         LINE#         101
+  C:1F45H         LINE#         102
+  C:1F45H         LINE#         103
+  C:1F4FH         LINE#         104
+  C:1F51H         LINE#         105
+  C:1F51H         LINE#         106
+  -------         ENDPROC       _OLED_POW
+  -------         PROC          _OLED_SHOWNUM
+  X:05F9H         SYMBOL        x
+  X:05FAH         SYMBOL        y
+  X:05FBH         SYMBOL        num
+  X:05FDH         SYMBOL        len
+  X:05FEH         SYMBOL        size1
+  -------         DO            
+  X:05FFH         SYMBOL        t
+  X:0600H         SYMBOL        temp
+  X:0601H         SYMBOL        enshow
+  -------         ENDDO         
+  C:169EH         LINE#         109
+  C:16ACH         LINE#         110
+  C:16ACH         LINE#         112
+  C:16B1H         LINE#         113
+  C:16C6H         LINE#         114
+  C:16C6H         LINE#         115
+BL51 BANKED LINKER/LOCATER V6.22                                                      03/09/2019  10:25:59  PAGE 9
+
+
+  C:16EDH         LINE#         116
+  C:1700H         LINE#         117
+  C:1700H         LINE#         118
+  C:1704H         LINE#         119
+  C:1704H         LINE#         120
+  C:171FH         LINE#         121
+  C:1721H         LINE#         122
+  C:1727H         LINE#         124
+  C:1727H         LINE#         125
+  C:174FH         LINE#         126
+  C:1758H         LINE#         127
+  -------         ENDPROC       _OLED_SHOWNUM
+  -------         PROC          OLED_INIT
+  C:1811H         LINE#         131
+  C:1811H         LINE#         132
+  C:1811H         LINE#         133
+  C:1813H         LINE#         134
+  C:181AH         LINE#         135
+  C:181CH         LINE#         137
+  C:1823H         LINE#         138
+  C:1828H         LINE#         139
+  C:182DH         LINE#         140
+  C:1832H         LINE#         141
+  C:1837H         LINE#         142
+  C:183CH         LINE#         143
+  C:1841H         LINE#         144
+  C:1846H         LINE#         145
+  C:184BH         LINE#         146
+  C:1850H         LINE#         147
+  C:1855H         LINE#         148
+  C:185AH         LINE#         149
+  C:185FH         LINE#         150
+  C:1864H         LINE#         151
+  C:1869H         LINE#         152
+  C:186EH         LINE#         153
+  C:1873H         LINE#         154
+  C:1878H         LINE#         155
+  C:187DH         LINE#         156
+  C:1882H         LINE#         157
+  C:1887H         LINE#         158
+  C:188CH         LINE#         159
+  C:1891H         LINE#         160
+  C:1896H         LINE#         161
+  C:189BH         LINE#         162
+  C:18A0H         LINE#         163
+  C:18A5H         LINE#         164
+  C:18A8H         LINE#         165
+  -------         ENDPROC       OLED_INIT
+  -------         ENDMOD        SPI
+
+  -------         MODULE        MPUIIC
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  C:1E99H         PUBLIC        _MPU_IIC_Read_Byte
+  D:0080H         PUBLIC        P0
+  D:0090H         PUBLIC        P1
+  C:1EECH         PUBLIC        _MPU_IIC_Send_Byte
+  C:1F88H         PUBLIC        MPU_IIC_Wait_Ack
+BL51 BANKED LINKER/LOCATER V6.22                                                      03/09/2019  10:25:59  PAGE 10
+
+
+  C:1FCFH         PUBLIC        MPU_IIC_Ack
+  C:1FB2H         PUBLIC        MPU_IIC_Start
+  C:1FC1H         PUBLIC        MPU_IIC_Stop
+  B:0080H.2       PUBLIC        MPU_IIC_SDA
+  C:1FD9H         PUBLIC        MPU_IIC_NAck
+  B:0080H.1       PUBLIC        MPU_IIC_SCL
+  C:1FA9H         PUBLIC        MPU_IIC_Delay
+  C:1FA4H         SYMBOL        L?0024
+  -------         PROC          L?0023
+  -------         ENDPROC       L?0023
+  C:1FA4H         SYMBOL        L?0024
+  -------         PROC          MPU_IIC_DELAY
+  -------         DO            
+  D:0007H         SYMBOL        i
+  -------         ENDDO         
+  C:1FA9H         LINE#         5
+  C:1FA9H         LINE#         6
+  C:1FA9H         LINE#         7
+  C:1FABH         LINE#         8
+  C:1FB1H         LINE#         9
+  -------         ENDPROC       MPU_IIC_DELAY
+  -------         PROC          MPU_IIC_START
+  C:1FB2H         LINE#         13
+  C:1FB2H         LINE#         14
+  C:1FB2H         LINE#         15
+  C:1FB4H         LINE#         16
+  C:1FB6H         LINE#         17
+  C:1FB9H         LINE#         18
+  C:1FBBH         LINE#         19
+  C:1FBEH         LINE#         20
+  C:1FC0H         LINE#         21
+  -------         ENDPROC       MPU_IIC_START
+  -------         PROC          MPU_IIC_STOP
+  C:1FC1H         LINE#         23
+  C:1FC1H         LINE#         24
+  C:1FC1H         LINE#         25
+  C:1FC3H         LINE#         26
+  C:1FC5H         LINE#         27
+  C:1FC8H         LINE#         28
+  C:1FCAH         LINE#         29
+  C:1FCCH         LINE#         30
+  -------         ENDPROC       MPU_IIC_STOP
+  -------         PROC          MPU_IIC_WAIT_ACK
+  -------         DO            
+  D:0005H         SYMBOL        ucErrTime
+  -------         ENDDO         
+  C:1F88H         LINE#         35
+  C:1F88H         LINE#         36
+  C:1F88H         LINE#         37
+  C:1F8AH         LINE#         38
+  C:1F8AH         LINE#         39
+  C:1F8DH         LINE#         40
+  C:1F90H         LINE#         41
+  C:1F90H         LINE#         42
+  C:1F91H         LINE#         43
+  C:1F97H         LINE#         44
+  C:1F97H         LINE#         45
+BL51 BANKED LINKER/LOCATER V6.22                                                      03/09/2019  10:25:59  PAGE 11
+
+
+  C:1F9AH         LINE#         46
+  C:1F9DH         LINE#         47
+  C:1F9DH         LINE#         48
+  C:1F9DH         LINE#         49
+  C:1F9FH         LINE#         50
+  C:1FA1H         LINE#         51
+  -------         ENDPROC       MPU_IIC_WAIT_ACK
+  -------         PROC          MPU_IIC_ACK
+  C:1FCFH         LINE#         53
+  C:1FCFH         LINE#         54
+  C:1FCFH         LINE#         55
+  C:1FD1H         LINE#         56
+  C:1FD3H         LINE#         57
+  C:1FD3H         LINE#         58
+  C:1FD3H         LINE#         59
+  C:1FD6H         LINE#         60
+  C:1FD8H         LINE#         61
+  -------         ENDPROC       MPU_IIC_ACK
+  -------         PROC          MPU_IIC_NACK
+  C:1FD9H         LINE#         63
+  C:1FD9H         LINE#         64
+  C:1FD9H         LINE#         65
+  C:1FDBH         LINE#         66
+  C:1FDBH         LINE#         67
+  C:1FDBH         LINE#         68
+  C:1FDBH         LINE#         69
+  C:1FDEH         LINE#         70
+  C:1FE0H         LINE#         71
+  -------         ENDPROC       MPU_IIC_NACK
+  -------         PROC          _MPU_IIC_SEND_BYTE
+  D:0005H         SYMBOL        txd
+  -------         DO            
+  D:0003H         SYMBOL        t
+  -------         ENDDO         
+  C:1EECH         LINE#         76
+  C:1EEEH         LINE#         77
+  C:1EEEH         LINE#         79
+  C:1EF0H         LINE#         80
+  C:1EF2H         LINE#         81
+  C:1EF2H         LINE#         82
+  C:1F00H         LINE#         83
+  C:1F04H         LINE#         84
+  C:1F06H         LINE#         85
+  C:1F09H         LINE#         86
+  C:1F0BH         LINE#         87
+  C:1F0EH         LINE#         88
+  C:1F13H         LINE#         89
+  -------         ENDPROC       _MPU_IIC_SEND_BYTE
+  -------         PROC          _MPU_IIC_READ_BYTE
+  D:0005H         SYMBOL        ack
+  -------         DO            
+  D:0003H         SYMBOL        i
+  D:0004H         SYMBOL        receive
+  -------         ENDDO         
+  C:1E99H         LINE#         91
+  C:1E9BH         LINE#         92
+  C:1E9BH         LINE#         93
+BL51 BANKED LINKER/LOCATER V6.22                                                      03/09/2019  10:25:59  PAGE 12
+
+
+  C:1E9DH         LINE#         94
+  C:1E9EH         LINE#         95
+  C:1E9EH         LINE#         96
+  C:1EA0H         LINE#         97
+  C:1EA3H         LINE#         98
+  C:1EA5H         LINE#         99
+  C:1EA9H         LINE#         100
+  C:1EADH         LINE#         101
+  C:1EB0H         LINE#         102
+  C:1EB5H         LINE#         103
+  C:1EB8H         LINE#         104
+  C:1EBDH         LINE#         106
+  C:1EC0H         LINE#         107
+  C:1EC2H         LINE#         108
+  -------         ENDPROC       _MPU_IIC_READ_BYTE
+  -------         ENDMOD        MPUIIC
+
+  -------         MODULE        MPU6050
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  D:0090H         PUBLIC        P1
+  C:1FE1H         PUBLIC        _MPU_Set_Gyro_Fsr
+  C:1759H         PUBLIC        _MPU_Get_Gyroscope
+  C:15E2H         PUBLIC        _MPU_Get_Accelerometer
+  C:1D9AH         PUBLIC        _MPU_Set_LPF
+  C:1E60H         PUBLIC        _MPU_Read_Byte
+  C:1FE8H         PUBLIC        _MPU_Set_Accel_Fsr
+  C:1AD6H         PUBLIC        _MPU_Read_Len
+  C:1DEAH         PUBLIC        _MPU_Write_Byte
+  C:1B53H         PUBLIC        _MPU_Write_Len
+  C:1C30H         PUBLIC        MPU_Init
+  C:1CF4H         PUBLIC        MPU_Get_Temperature
+  C:1C98H         PUBLIC        _MPU_Set_Rate
+  -------         PROC          MPU_INIT
+  -------         DO            
+  D:0007H         SYMBOL        res
+  -------         ENDDO         
+  C:1C30H         LINE#         7
+  C:1C30H         LINE#         8
+  C:1C30H         LINE#         10
+  C:1C37H         LINE#         11
+  C:1C3EH         LINE#         12
+  C:1C45H         LINE#         13
+  C:1C4AH         LINE#         14
+  C:1C4FH         LINE#         15
+  C:1C56H         LINE#         16
+  C:1C5DH         LINE#         17
+  C:1C64H         LINE#         18
+  C:1C6BH         LINE#         19
+  C:1C72H         LINE#         20
+  C:1C77H         LINE#         21
+  C:1C7BH         LINE#         22
+  C:1C7BH         LINE#         23
+  C:1C82H         LINE#         24
+  C:1C89H         LINE#         25
+  C:1C90H         LINE#         26
+  C:1C95H         LINE#         27
+BL51 BANKED LINKER/LOCATER V6.22                                                      03/09/2019  10:25:59  PAGE 13
+
+
+  C:1C97H         LINE#         28
+  -------         ENDPROC       MPU_INIT
+  -------         PROC          _MPU_SET_GYRO_FSR
+  D:0007H         SYMBOL        fsr
+  C:1FE1H         LINE#         33
+  C:1FE1H         LINE#         34
+  C:1FE1H         LINE#         35
+  C:1FE7H         LINE#         36
+  -------         ENDPROC       _MPU_SET_GYRO_FSR
+  -------         PROC          _MPU_SET_ACCEL_FSR
+  D:0007H         SYMBOL        fsr
+  C:1FE8H         LINE#         41
+  C:1FE8H         LINE#         42
+  C:1FE8H         LINE#         43
+  C:1FEEH         LINE#         44
+  -------         ENDPROC       _MPU_SET_ACCEL_FSR
+  -------         PROC          _MPU_SET_LPF
+  D:0006H         SYMBOL        lpf
+  -------         DO            
+  D:0005H         SYMBOL        data1
+  -------         ENDDO         
+  C:1D9AH         LINE#         49
+  C:1D9AH         LINE#         50
+  C:1D9AH         LINE#         51
+  C:1D9CH         LINE#         52
+  C:1DA8H         LINE#         53
+  C:1DB5H         LINE#         54
+  C:1DC2H         LINE#         55
+  C:1DCFH         LINE#         56
+  C:1DDCH         LINE#         57
+  C:1DDEH         LINE#         58
+  C:1DE3H         LINE#         59
+  -------         ENDPROC       _MPU_SET_LPF
+  -------         PROC          _MPU_SET_RATE
+  X:05F4H         SYMBOL        rate
+  -------         DO            
+  X:05F6H         SYMBOL        data1
+  -------         ENDDO         
+  C:1C98H         LINE#         64
+  C:1CA0H         LINE#         65
+  C:1CA0H         LINE#         67
+  C:1CB2H         LINE#         68
+  C:1CC7H         LINE#         69
+  C:1CDBH         LINE#         70
+  C:1CE5H         LINE#         71
+  C:1CF3H         LINE#         72
+  -------         ENDPROC       _MPU_SET_RATE
+  -------         PROC          MPU_GET_TEMPERATURE
+  -------         DO            
+  X:05F9H         SYMBOL        buf
+  D:0006H         SYMBOL        raw
+  X:05FBH         SYMBOL        temp
+  -------         ENDDO         
+  C:1CF4H         LINE#         76
+  C:1CF4H         LINE#         77
+  C:1CF4H         LINE#         81
+  C:1D07H         LINE#         82
+BL51 BANKED LINKER/LOCATER V6.22                                                      03/09/2019  10:25:59  PAGE 14
+
+
+  C:1D11H         LINE#         83
+  C:1D32H         LINE#         84
+  C:1D4DH         LINE#         85
+  -------         ENDPROC       MPU_GET_TEMPERATURE
+  -------         PROC          _MPU_GET_GYROSCOPE
+  X:05F5H         SYMBOL        gx
+  X:05F8H         SYMBOL        gy
+  X:05FBH         SYMBOL        gz
+  -------         DO            
+  X:05FEH         SYMBOL        buf1
+  X:0600H         SYMBOL        buf2
+  X:0602H         SYMBOL        buf3
+  X:0604H         SYMBOL        res
+  -------         ENDDO         
+  C:1759H         LINE#         90
+  C:1764H         LINE#         91
+  C:1764H         LINE#         93
+  C:177CH         LINE#         94
+  C:177EH         LINE#         95
+  C:1799H         LINE#         96
+  C:17B5H         LINE#         97
+  C:17B7H         LINE#         98
+  C:17D2H         LINE#         99
+  C:17EEH         LINE#         100
+  C:17F0H         LINE#         101
+  C:180BH         LINE#         102
+  C:1810H         LINE#         103
+  -------         ENDPROC       _MPU_GET_GYROSCOPE
+  -------         PROC          _MPU_GET_ACCELEROMETER
+  X:05F6H         SYMBOL        ax
+  X:05F9H         SYMBOL        ay
+  X:05FCH         SYMBOL        az
+  -------         DO            
+  X:05FFH         SYMBOL        buf1
+  X:0601H         SYMBOL        buf2
+  X:0603H         SYMBOL        buf3
+  X:0605H         SYMBOL        res
+  -------         ENDDO         
+  C:15E2H         LINE#         108
+  C:15EDH         LINE#         109
+  C:15EDH         LINE#         111
+  C:1609H         LINE#         112
+  C:160BH         LINE#         113
+  C:1626H         LINE#         114
+  C:1642H         LINE#         115
+  C:1644H         LINE#         116
+  C:165FH         LINE#         117
+  C:167BH         LINE#         118
+  C:167DH         LINE#         119
+  C:1698H         LINE#         120
+  C:169DH         LINE#         121
+  -------         ENDPROC       _MPU_GET_ACCELEROMETER
+  -------         PROC          _MPU_WRITE_LEN
+  X:060CH         SYMBOL        addr
+  X:060DH         SYMBOL        reg
+  X:060EH         SYMBOL        len
+  X:060FH         SYMBOL        buf
+BL51 BANKED LINKER/LOCATER V6.22                                                      03/09/2019  10:25:59  PAGE 15
+
+
+  -------         DO            
+  X:0612H         SYMBOL        i
+  -------         ENDDO         
+  C:1B53H         LINE#         129
+  C:1B5EH         LINE#         130
+  C:1B5EH         LINE#         132
+  C:1B61H         LINE#         133
+  C:1B6BH         LINE#         134
+  C:1B71H         LINE#         135
+  C:1B71H         LINE#         136
+  C:1B71H         LINE#         137
+  C:1B73H         LINE#         138
+  C:1B73H         LINE#         139
+  C:1B7BH         LINE#         140
+  C:1B7EH         LINE#         141
+  C:1B91H         LINE#         142
+  C:1B91H         LINE#         143
+  C:1BA8H         LINE#         144
+  C:1BAEH         LINE#         145
+  C:1BAEH         LINE#         146
+  C:1BB1H         LINE#         147
+  C:1BB4H         LINE#         148
+  C:1BB4H         LINE#         149
+  C:1BBCH         LINE#         150
+  C:1BBFH         LINE#         151
+  C:1BC1H         LINE#         152
+  -------         ENDPROC       _MPU_WRITE_LEN
+  -------         PROC          L?0048
+  -------         ENDPROC       L?0048
+  -------         PROC          _MPU_READ_LEN
+  X:0606H         SYMBOL        addr
+  X:0607H         SYMBOL        reg
+  X:0608H         SYMBOL        len
+  X:0609H         SYMBOL        buf
+  C:1AD6H         LINE#         160
+  C:1AE1H         LINE#         161
+  C:1AE1H         LINE#         162
+  C:1AE4H         LINE#         163
+  C:1AEEH         LINE#         164
+  C:1AF4H         LINE#         165
+  C:1AF4H         LINE#         166
+  C:1AF7H         LINE#         167
+  C:1AFAH         LINE#         168
+  C:1AFAH         LINE#         169
+  C:1B04H         LINE#         170
+  C:1B07H         LINE#         171
+  C:1B0AH         LINE#         172
+  C:1B16H         LINE#         173
+  C:1B19H         LINE#         174
+  C:1B20H         LINE#         175
+  C:1B20H         LINE#         176
+  C:1B27H         LINE#         177
+  C:1B3BH         LINE#         178
+  C:1B41H         LINE#         179
+  C:1B4BH         LINE#         180
+  C:1B4DH         LINE#         181
+  C:1B50H         LINE#         182
+BL51 BANKED LINKER/LOCATER V6.22                                                      03/09/2019  10:25:59  PAGE 16
+
+
+  C:1B52H         LINE#         183
+  -------         ENDPROC       _MPU_READ_LEN
+  -------         PROC          L?0049
+  -------         ENDPROC       L?0049
+  -------         PROC          _MPU_WRITE_BYTE
+  X:05F7H         SYMBOL        reg
+  X:05F8H         SYMBOL        data1
+  C:1DEAH         LINE#         189
+  C:1DF2H         LINE#         190
+  C:1DF2H         LINE#         191
+  C:1DF5H         LINE#         192
+  C:1DFAH         LINE#         193
+  C:1E00H         LINE#         194
+  C:1E00H         LINE#         195
+  C:1E00H         LINE#         196
+  C:1E02H         LINE#         197
+  C:1E02H         LINE#         198
+  C:1E0AH         LINE#         199
+  C:1E0DH         LINE#         200
+  C:1E15H         LINE#         201
+  C:1E1BH         LINE#         202
+  C:1E1BH         LINE#         203
+  C:1E1EH         LINE#         204
+  C:1E21H         LINE#         205
+  C:1E21H         LINE#         206
+  C:1E24H         LINE#         207
+  C:1E26H         LINE#         208
+  -------         ENDPROC       _MPU_WRITE_BYTE
+  -------         PROC          _MPU_READ_BYTE
+  X:05F4H         SYMBOL        reg
+  -------         DO            
+  X:05F5H         SYMBOL        res
+  -------         ENDDO         
+  C:1E60H         LINE#         212
+  C:1E65H         LINE#         213
+  C:1E65H         LINE#         215
+  C:1E68H         LINE#         216
+  C:1E6DH         LINE#         217
+  C:1E70H         LINE#         218
+  C:1E78H         LINE#         219
+  C:1E7BH         LINE#         220
+  C:1E7EH         LINE#         221
+  C:1E83H         LINE#         222
+  C:1E86H         LINE#         223
+  C:1E90H         LINE#         224
+  C:1E93H         LINE#         225
+  C:1E98H         LINE#         226
+  -------         ENDPROC       _MPU_READ_BYTE
+  -------         ENDMOD        MPU6050
+
+  -------         MODULE        PARAMETER
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  D:0090H         PUBLIC        P1
+  X:05D0H         PUBLIC        aacx_offset
+  X:05D2H         PUBLIC        aacy_offset
+  X:05D4H         PUBLIC        aacz_offset
+BL51 BANKED LINKER/LOCATER V6.22                                                      03/09/2019  10:25:59  PAGE 17
+
+
+  C:1A4FH         PUBLIC        Connect_Check
+  C:19C5H         PUBLIC        Gyroscope_Adjust
+  X:05D6H         PUBLIC        pitch
+  X:05DAH         PUBLIC        aacx
+  X:05DCH         PUBLIC        aacy
+  X:05DEH         PUBLIC        aacz
+  C:193BH         PUBLIC        Acceleration_Adjust
+  X:05E0H         PUBLIC        gyrox_offset
+  X:05E2H         PUBLIC        gyroy_offset
+  X:05E4H         PUBLIC        gyroz_offset
+  C:123EH         PUBLIC        _Show_Temperture
+  X:05E6H         PUBLIC        roll
+  X:05EAH         PUBLIC        gyrox
+  X:05ECH         PUBLIC        gyroy
+  X:05EEH         PUBLIC        gyroz
+  C:1386H         PUBLIC        Gyroscope_Adjust1
+  C:0DCCH         PUBLIC        Show_Gyroscope
+  X:05F0H         PUBLIC        yaw
+  C:10C7H         PUBLIC        Acceleration_Adjust1
+  C:0AADH         PUBLIC        Show_Acceleration
+  -------         PROC          SHOW_GYROSCOPE
+  -------         DO            
+  X:0613H         SYMBOL        temp
+  -------         ENDDO         
+  C:0DCCH         LINE#         13
+  C:0DCCH         LINE#         14
+  C:0DCCH         LINE#         16
+  C:0DF5H         LINE#         17
+  C:0DF5H         LINE#         18
+  C:0E08H         LINE#         19
+  C:0E1BH         LINE#         20
+  C:0E2EH         LINE#         21
+  C:0E41H         LINE#         22
+  C:0E54H         LINE#         23
+  C:0E67H         LINE#         26
+  C:0E7CH         LINE#         27
+  C:0EA4H         LINE#         28
+  C:0EAEH         LINE#         29
+  C:0EAEH         LINE#         30
+  C:0EBFH         LINE#         31
+  C:0ED4H         LINE#         32
+  C:0ED6H         LINE#         33
+  C:0EE7H         LINE#         34
+  C:0F0BH         LINE#         35
+  C:0F2FH         LINE#         38
+  C:0F44H         LINE#         39
+  C:0F6CH         LINE#         40
+  C:0F76H         LINE#         41
+  C:0F76H         LINE#         42
+  C:0F87H         LINE#         43
+  C:0F9CH         LINE#         44
+  C:0F9EH         LINE#         45
+  C:0FAFH         LINE#         46
+  C:0FD3H         LINE#         47
+  C:0FF7H         LINE#         50
+  C:100CH         LINE#         51
+  C:1034H         LINE#         52
+BL51 BANKED LINKER/LOCATER V6.22                                                      03/09/2019  10:25:59  PAGE 18
+
+
+  C:103EH         LINE#         53
+  C:103EH         LINE#         54
+  C:104FH         LINE#         55
+  C:1064H         LINE#         56
+  C:1066H         LINE#         57
+  C:1077H         LINE#         58
+  C:109BH         LINE#         59
+  C:10BFH         LINE#         60
+  C:10C6H         LINE#         61
+  C:10C6H         LINE#         62
+  -------         ENDPROC       SHOW_GYROSCOPE
+  -------         PROC          SHOW_ACCELERATION
+  -------         DO            
+  X:05F4H         SYMBOL        temp
+  -------         ENDDO         
+  C:0AADH         LINE#         69
+  C:0AADH         LINE#         70
+  C:0AADH         LINE#         72
+  C:0AD6H         LINE#         73
+  C:0AD6H         LINE#         74
+  C:0AE9H         LINE#         75
+  C:0AFCH         LINE#         76
+  C:0B0FH         LINE#         77
+  C:0B22H         LINE#         78
+  C:0B35H         LINE#         79
+  C:0B48H         LINE#         80
+  C:0B5BH         LINE#         81
+  C:0B6EH         LINE#         82
+  C:0B81H         LINE#         84
+  C:0B96H         LINE#         85
+  C:0BBDH         LINE#         86
+  C:0BC5H         LINE#         87
+  C:0BC5H         LINE#         88
+  C:0BDAH         LINE#         89
+  C:0BE0H         LINE#         90
+  C:0BE2H         LINE#         91
+  C:0BF5H         LINE#         92
+  C:0C19H         LINE#         93
+  C:0C3DH         LINE#         95
+  C:0C52H         LINE#         96
+  C:0C79H         LINE#         97
+  C:0C83H         LINE#         98
+  C:0C83H         LINE#         99
+  C:0C94H         LINE#         100
+  C:0CA9H         LINE#         101
+  C:0CABH         LINE#         102
+  C:0CBCH         LINE#         103
+  C:0CE0H         LINE#         104
+  C:0D04H         LINE#         106
+  C:0D19H         LINE#         107
+  C:0D40H         LINE#         108
+  C:0D4AH         LINE#         109
+  C:0D4AH         LINE#         110
+  C:0D5BH         LINE#         111
+  C:0D70H         LINE#         112
+  C:0D72H         LINE#         113
+  C:0D83H         LINE#         114
+BL51 BANKED LINKER/LOCATER V6.22                                                      03/09/2019  10:25:59  PAGE 19
+
+
+  C:0DA7H         LINE#         115
+  C:0DCBH         LINE#         116
+  C:0DCBH         LINE#         117
+  -------         ENDPROC       SHOW_ACCELERATION
+  -------         PROC          _SHOW_TEMPERTURE
+  X:05F4H         SYMBOL        x
+  X:05F5H         SYMBOL        y
+  X:05F6H         SYMBOL        size1
+  -------         DO            
+  X:05F7H         SYMBOL        temp
+  -------         ENDDO         
+  C:123EH         LINE#         120
+  C:1249H         LINE#         121
+  C:1249H         LINE#         123
+  C:1254H         LINE#         124
+  C:126BH         LINE#         125
+  C:128EH         LINE#         126
+  C:12B1H         LINE#         127
+  C:12C4H         LINE#         128
+  C:12C4H         LINE#         129
+  C:12DDH         LINE#         130
+  C:12F2H         LINE#         131
+  C:12F4H         LINE#         132
+  C:130DH         LINE#         133
+  C:1341H         LINE#         134
+  C:137FH         LINE#         135
+  -------         ENDPROC       _SHOW_TEMPERTURE
+  -------         PROC          GYROSCOPE_ADJUST1
+  -------         DO            
+  X:05F4H         SYMBOL        t
+  -------         ENDDO         
+  C:1386H         LINE#         139
+  C:1386H         LINE#         140
+  C:1386H         LINE#         141
+  C:138CH         LINE#         142
+  C:1393H         LINE#         143
+  C:1397H         LINE#         144
+  C:139BH         LINE#         145
+  C:13A0H         LINE#         146
+  C:13AAH         LINE#         147
+  C:13AAH         LINE#         148
+  C:13D0H         LINE#         149
+  C:13D0H         LINE#         150
+  C:13E4H         LINE#         151
+  C:13F8H         LINE#         152
+  C:140CH         LINE#         153
+  C:1413H         LINE#         154
+  C:1413H         LINE#         155
+  C:1415H         LINE#         156
+  C:142CH         LINE#         157
+  C:1441H         LINE#         158
+  C:1456H         LINE#         160
+  C:147CH         LINE#         161
+  C:147CH         LINE#         162
+  C:14BBH         LINE#         163
+  C:14BDH         LINE#         164
+  C:14BDH         LINE#         165
+BL51 BANKED LINKER/LOCATER V6.22                                                      03/09/2019  10:25:59  PAGE 20
+
+
+  -------         ENDPROC       GYROSCOPE_ADJUST1
+  -------         PROC          ACCELERATION_ADJUST1
+  -------         DO            
+  X:05F4H         SYMBOL        t
+  -------         ENDDO         
+  C:10C7H         LINE#         169
+  C:10C7H         LINE#         170
+  C:10C7H         LINE#         171
+  C:10D0H         LINE#         172
+  C:10D7H         LINE#         173
+  C:10DEH         LINE#         174
+  C:10E2H         LINE#         175
+  C:10E6H         LINE#         176
+  C:10F7H         LINE#         177
+  C:10F7H         LINE#         178
+  C:111DH         LINE#         179
+  C:111DH         LINE#         180
+  C:1138H         LINE#         181
+  C:1153H         LINE#         183
+  C:1161H         LINE#         184
+  C:1179H         LINE#         185
+  C:1180H         LINE#         186
+  C:1180H         LINE#         187
+  C:1183H         LINE#         188
+  C:11ACH         LINE#         189
+  C:11ACH         LINE#         190
+  C:11BAH         LINE#         191
+  C:1238H         LINE#         194
+  C:123BH         LINE#         195
+  C:123DH         LINE#         196
+  C:123DH         LINE#         197
+  -------         ENDPROC       ACCELERATION_ADJUST1
+  -------         PROC          CONNECT_CHECK
+  C:1A4FH         LINE#         202
+  C:1A4FH         LINE#         203
+  C:1A4FH         LINE#         204
+  C:1A55H         LINE#         205
+  C:1A55H         LINE#         206
+  C:1A68H         LINE#         207
+  C:1A6FH         LINE#         208
+  C:1A82H         LINE#         209
+  C:1A89H         LINE#         210
+  C:1A9CH         LINE#         211
+  C:1AA3H         LINE#         212
+  C:1AB6H         LINE#         213
+  C:1ABDH         LINE#         214
+  C:1ABFH         LINE#         215
+  -------         ENDPROC       CONNECT_CHECK
+  -------         PROC          ACCELERATION_ADJUST
+  C:193BH         LINE#         220
+  C:193BH         LINE#         221
+  C:193BH         LINE#         222
+  C:1941H         LINE#         223
+  C:1941H         LINE#         224
+  C:1954H         LINE#         225
+  C:195BH         LINE#         226
+  C:196EH         LINE#         227
+BL51 BANKED LINKER/LOCATER V6.22                                                      03/09/2019  10:25:59  PAGE 21
+
+
+  C:1975H         LINE#         228
+  C:1988H         LINE#         229
+  C:198FH         LINE#         230
+  C:19A2H         LINE#         231
+  C:19A9H         LINE#         232
+  C:19ABH         LINE#         233
+  C:19BEH         LINE#         234
+  -------         ENDPROC       ACCELERATION_ADJUST
+  -------         PROC          GYROSCOPE_ADJUST
+  C:19C5H         LINE#         238
+  C:19C5H         LINE#         239
+  C:19C5H         LINE#         240
+  C:19CBH         LINE#         241
+  C:19CBH         LINE#         242
+  C:19DEH         LINE#         243
+  C:19E5H         LINE#         244
+  C:19F8H         LINE#         245
+  C:19FFH         LINE#         246
+  C:1A12H         LINE#         247
+  C:1A19H         LINE#         248
+  C:1A2CH         LINE#         249
+  C:1A33H         LINE#         250
+  C:1A35H         LINE#         251
+  C:1A48H         LINE#         252
+  -------         ENDPROC       GYROSCOPE_ADJUST
+  -------         ENDMOD        PARAMETER
+
+  -------         MODULE        ?C?FPADD
+  C:05FDH         PUBLIC        ?C?FPADD
+  C:05F9H         PUBLIC        ?C?FPSUB
+  -------         ENDMOD        ?C?FPADD
+
+  -------         MODULE        ?C?FPMUL
+  C:06EEH         PUBLIC        ?C?FPMUL
+  -------         ENDMOD        ?C?FPMUL
+
+  -------         MODULE        ?C?FPDIV
+  C:07F7H         PUBLIC        ?C?FPDIV
+  -------         ENDMOD        ?C?FPDIV
+
+  -------         MODULE        ?C?FCAST
+  C:089EH         PUBLIC        ?C?FCASTC
+  C:0899H         PUBLIC        ?C?FCASTI
+  C:0894H         PUBLIC        ?C?FCASTL
+  -------         ENDMOD        ?C?FCAST
+
+  -------         MODULE        ?C?CASTF
+  C:08D2H         PUBLIC        ?C?CASTF
+  -------         ENDMOD        ?C?CASTF
+
+  -------         MODULE        ?C?CLDPTR
+  C:0953H         PUBLIC        ?C?CLDPTR
+  -------         ENDMOD        ?C?CLDPTR
+
+  -------         MODULE        ?C?CLDOPTR
+  C:096CH         PUBLIC        ?C?CLDOPTR
+  -------         ENDMOD        ?C?CLDOPTR
+BL51 BANKED LINKER/LOCATER V6.22                                                      03/09/2019  10:25:59  PAGE 22
+
+
+
+  -------         MODULE        ?C?CSTPTR
+  C:0999H         PUBLIC        ?C?CSTPTR
+  -------         ENDMOD        ?C?CSTPTR
+
+  -------         MODULE        ?C?IMUL
+  C:09ABH         PUBLIC        ?C?IMUL
+  -------         ENDMOD        ?C?IMUL
+
+  -------         MODULE        ?C?UIDIV
+  C:09BDH         PUBLIC        ?C?UIDIV
+  -------         ENDMOD        ?C?UIDIV
+
+  -------         MODULE        ?C?SIDIV
+  C:0A12H         PUBLIC        ?C?SIDIV
+  -------         ENDMOD        ?C?SIDIV
+
+  -------         MODULE        ?C?IILDX
+  C:0A48H         PUBLIC        ?C?IILDX
+  -------         ENDMOD        ?C?IILDX
+
+  -------         MODULE        ?C?ILDIX
+  C:0A5EH         PUBLIC        ?C?ILDIX
+  -------         ENDMOD        ?C?ILDIX
+
+  -------         MODULE        ?C?ISTPTR
+  C:0A74H         PUBLIC        ?C?ISTPTR
+  -------         ENDMOD        ?C?ISTPTR
+
+  -------         MODULE        ?C?LNEG
+  C:0A93H         PUBLIC        ?C?LNEG
+  -------         ENDMOD        ?C?LNEG
+
+  -------         MODULE        ?C?LSTXDATA
+  C:0AA1H         PUBLIC        ?C?LSTXDATA
+  -------         ENDMOD        ?C?LSTXDATA
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_MPU_WRITE_LEN?MPU6050
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?SHOW_GYROSCOPE?PARAMETER
+
+Program Size: data=9.0 xdata=1557 code=8175
+LINK/LOCATE RUN COMPLETE.  2 WARNING(S),  0 ERROR(S)
